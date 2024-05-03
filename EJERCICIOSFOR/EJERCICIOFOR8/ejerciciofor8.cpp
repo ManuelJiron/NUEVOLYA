@@ -3,45 +3,31 @@ misma longitud y luego calcule su producto punto. Muestra el resultado
 al finalizar el cálculo.
 */
 
-#include<iostream>
-#include<vector>
-
+#include <iostream>
 using namespace std;
+#define MAX 3
+int vector1[MAX];
+int vector2[MAX];
 
 int main(int argc, char const *argv[])
 {
-    int longitud, productoPunto = 0;
-
-    cout<<"Ingrese la longitud de los vectores: ";
-    cin>>longitud;
-
-    vector<int> vector1(longitud);
-    vector<int> vector2(longitud);
-
-    cout <<"Ingrese los componentes del primer vector: ";
-    for (int i = 0; i < longitud; i++)
+    int num1, num2, producto = 0;
+    for (int i = 0; i < MAX; i++)
     {
-        cout << "Elemento" << i+1 << ": ";
-        cin >> vector1[i];
+        cout << "\ningresar numero " << i + 1 << " a vector 1: ";
+        cin >> num1;
+        vector1[i] = num1;
+        cout << "ingresar numero " << i + 1 << " a vector 2: ";
+        cin >> num2;
+        vector2[i] = num2;
     }
-    cout <<"Ingrese los componentes del segundo vector: ";
-    for (int i = 0; i < longitud; i++)
+     for (int i = 0; i < MAX; i++)
     {
-        cout << "Elemento" << i+1 << ": ";
-        cin >> vector2[i];
+        producto += vector1[i] * vector2[i];
     }
-
-    for (int i = 0; i < longitud; i++)
-    {
-        productoPunto += vector1[i] * vector2[i];
-    }
-
-    cout << "El producto Punto de los dos vectores es igual a: " << productoPunto << endl;
-    
-
-    
-    
+    cout << "\nel producto punto de los dos vectores es: " << producto << endl;
 
 
     return 0;
 }
+
