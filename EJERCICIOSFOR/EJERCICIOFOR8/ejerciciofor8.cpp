@@ -14,10 +14,10 @@ int main(int argc, char const *argv[])
     int num1, num2, producto = 0;
     for (int i = 0; i < MAX; i++)
     {
-        cout << "\ningresar numero " << i + 1 << " a vector 1: ";
+        cout << "Ingresar numero " << i + 1 << " a vector 1: ";
         cin >> num1;
         vector1[i] = num1;
-        cout << "ingresar numero " << i + 1 << " a vector 2: ";
+        cout << "Ingresar numero " << i + 1 << " a vector 2: ";
         cin >> num2;
         vector2[i] = num2;
     }
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
     {
         producto += vector1[i] * vector2[i];
     }
-    cout << "\nel producto punto de los dos vectores es: " << producto << endl;
+    cout << "nel producto punto de los dos vectores es: " << producto << endl;
 
 
     return 0;
